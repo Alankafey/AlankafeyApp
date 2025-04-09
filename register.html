@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Register - Christian View College</title>
+  <style>
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      margin: 0;
+      padding: 0;
+      background: #f2f2f2;
+    }
+    .container {
+      max-width: 600px;
+      margin: 50px auto;
+      background: #fff;
+      padding: 30px;
+      border-radius: 10px;
+      box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+    }
+    h2 {
+      text-align: center;
+      color: #0a2e59;
+    }
+    form {
+      display: flex;
+      flex-direction: column;
+    }
+    label {
+      margin-top: 15px;
+      font-weight: bold;
+    }
+    input, select, textarea {
+      margin-top: 5px;
+      padding: 10px;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+      font-size: 16px;
+    }
+    button {
+      margin-top: 20px;
+      padding: 12px;
+      background-color: #ff6600;
+      color: white;
+      font-size: 16px;
+      font-weight: bold;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+    button:hover {
+      background-color: #e65c00;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h2>Student Registration Form</h2>
+    <form onsubmit="handleSubmit(event)">
+      <label for="fullname">Full Name</label>
+      <input type="text" id="fullname" name="fullname" required>
+
+      <label for="email">Email Address</label>
+      <input type="email" id="email" name="email" required>
+
+      <label for="phone">Phone Number</label>
+      <input type="tel" id="phone" name="phone" required>
+
+      <label for="course">Select Course</label>
+      <select id="course" name="course" required>
+        <option value="">-- Select --</option>
+        <option value="wassce">WASSCE May/June</option>
+        <option value="vacation">Vacation Classes</option>
+      </select>
+
+      <label for="message">Additional Message</label>
+      <textarea id="message" name="message" rows="4"></textarea>
+
+      <button type="submit">Submit Registration</button>
+    </form>
+    <a href="student.html">SEE YOUR DETAILS</a>
+  </div>
+
+  <script>
+    function handleSubmit(event) {
+      event.preventDefault();
+      alert("Registered successfully");
+    }
+  </script>
+</body>
+</html>
